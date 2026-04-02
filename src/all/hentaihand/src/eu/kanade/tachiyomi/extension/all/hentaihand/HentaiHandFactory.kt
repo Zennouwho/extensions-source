@@ -5,7 +5,6 @@ import eu.kanade.tachiyomi.source.Source
 import eu.kanade.tachiyomi.source.SourceFactory
 import okhttp3.OkHttpClient
 
-
 class HentaiHandFactory : SourceFactory {
     override fun createSources(): List<Source> = listOf(
         // https://hentaihand.com/api/languages?per_page=50
