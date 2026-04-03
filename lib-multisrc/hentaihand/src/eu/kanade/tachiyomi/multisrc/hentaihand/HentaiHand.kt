@@ -130,9 +130,9 @@ abstract class HentaiHand(
                 is LookupFilter -> {
                     filter.state.split(",").map { it.trim() }.filter { it.isNotBlank() }.map {
                         lookupFilterId(it, filter.uri) ?: throw Exception("No ${filter.singularName} \"$it\" was found")
-                    }.forEachIndexed { index, it ->
+                    }.forEach { it ->
                         if (!(filter.uri == "languages" && hhLangId.contains(it))) {
-                            url.addQueryParameter(filter.uri + "[$index]", it.toString())
+                            url.addQueryParameter(filter.uri, it.toString())
                         }
                     }
                 }
