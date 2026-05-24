@@ -225,7 +225,7 @@ class SearchResponse(
 
 @Serializable
 class ChapterDetailsResponse(
-    val result: Items,
+    val result: Items? = null,
 ) {
     @Serializable
     class Items(
